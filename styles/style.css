@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-background: #011627; /*Cor de background */
+    --cor-header-footer: #051e33; /*Cor de destaque, header e footer #5296A5 */
+    --cor-letras: #FDFFFC; /*Cor das letras */
+    --cor-hover: #5296A5; /*Cor de hover */
+    --cor-strong: #FF0022; /*Cor do destaque */
+
+    --font-primaria: 'Krona One', sans-serif;
+    --font-secundaria: "Montserrat", sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-background);
+    color: var(--cor-letras);
+}
+
+.cabecalho {
+    background-color: var(--cor-header-footer);
+    padding: 2% 0% 0% 19%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu--link {
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-letras);
+    text-decoration: none;
+}
+
+.apresentacao {
+    padding: 6.5% 19%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6%;
+}
+
+.apresentacao__conteudo {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    gap: 45px;
+    width: 50%;
+}
+
+.apresentacao__conteudo--titulo {
+    font-size: 2.25rem; /* Aqui eu apliquei o "rem" que é uma medida responsiva, ou seja, se adpta conforme a vontade do usuário basta dividir a medida de pixel para rem divindo por 16. */
+    font-family: var(--font-primaria);
+    font-weight: 400;
+}
+
+.strong-title {
+    color: var(--cor-strong);
+}
+
+.apresentacao__conteudo--texto {
+    font-size: 1.5rem;
+    font-family: var(--font-secundaria);
+    font-weight: 400;
+}
+
+.apresentacao__conteudo--links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links--subtitulo {
+    font-family: var(--font-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.div__links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border-radius: 8px;
+    padding: 16px 0;
+    width: 70%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font-secundaria);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--cor-terciaria);
+    border: 2px solid var(--cor-strong);
+    transition: all 0.5s;
+}
+
+.div__links:hover {
+    background-color: var(--cor-hover);
+    padding: 15px;
+}
+
+.apresentacao__imagem {
+    width: 50%;
+}
+
+.rodape {
+    background-color: var(--cor-header-footer);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* mudando a disposição das tags, conforme o tamanho das telas */
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 6%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+    .apresentacao__imagem {
+        width: auto;
+        padding: 5%;
+    }
+}
